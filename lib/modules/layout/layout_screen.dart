@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_1pm/modules/layout/screens/hadeth_screen.dart';
@@ -37,11 +38,11 @@ class _LayoutScreenState extends State<LayoutScreen> {
   //   }
   // }
   List<String> titles = [
-    "Islamic",
-    "Hadeth",
-    "Sebha",
-    "Radio",
-    "Settings",
+    "islami",
+    "hadeth",
+    "sebha",
+    "radio",
+    "settings",
   ];
   List<Widget> screens = [
     QuranScreen(),
@@ -58,7 +59,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           title: Text(
-            titles[selectedIndex],
+            titles[selectedIndex].tr(),
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -70,21 +71,21 @@ class _LayoutScreenState extends State<LayoutScreen> {
 
             setState(() {});
           },
-          items: const [
+          items:  [
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/Images/icon_quran.png")),
-                label: "Quran"),
+                label: "quran".tr()),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/Images/icon_hadeth.png")),
-                label: "Hadeth"),
+                label: "hadeth".tr()),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/Images/icon_sebha.png")),
-                label: "Sebha"),
+                label: "sebha".tr()),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/Images/icon_radio.png")),
-                label: "Radio"),
+                label: "radio".tr()),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "Settings"),
+                icon: Icon(Icons.settings), label: "settings".tr()),
           ],
         ),
         body: PageView(

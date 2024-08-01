@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_1pm/modules/layout/widgets/surah_name_widget.dart';
 
@@ -17,7 +18,7 @@ class QuranScreen extends StatelessWidget {
             children: [
               Expanded(
                   child: Text(
-                "Surah Name",
+                "surah_name".tr(),
                 textAlign: TextAlign.center,
                 style: theme.textTheme.bodyLarge,
               )),
@@ -25,8 +26,9 @@ class QuranScreen extends StatelessWidget {
                   height: size.height * 0.05, child: const VerticalDivider()),
               Expanded(
                   child: Text(
-                "Surah Verses",
-                textAlign: TextAlign.center,
+                    "surah_verses".tr(),
+
+                    textAlign: TextAlign.center,
                 style: theme.textTheme.bodyLarge,
               )),
             ],

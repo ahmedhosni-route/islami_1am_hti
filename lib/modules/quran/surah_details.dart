@@ -27,7 +27,7 @@ class _SurahDetailsState extends State<SurahDetails> {
     return CustomBg(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Islami"),
+          title:  Text("slami"),
         ),
         body: verses.isEmpty
             ? const Center(child: CircularProgressIndicator())
@@ -69,22 +69,25 @@ class _SurahDetailsState extends State<SurahDetails> {
                             TextSpan(
                                 children: verses.map((e) {
                               return TextSpan(
-                                text: replaceArabicNumber(e.trim()),
-                                style: theme.textTheme.bodyLarge!.copyWith(
-                                    fontFamily:
-                                        GoogleFonts.amiriQuran().fontFamily),
-                                children:[
-                                  TextSpan(text: " "),
-
-                                  TextSpan(text: (verses.indexWhere((element) => element == e) +1).toString(),style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                    fontFamily: "aya",
-                                    fontSize: 30
-                                  )),
-                                  TextSpan(text: " "),
-
-
-                                ]
-                              );
+                                  text: replaceArabicNumber(e.trim()),
+                                  style: theme.textTheme.bodyLarge!.copyWith(
+                                      fontFamily:
+                                          GoogleFonts.amiriQuran().fontFamily),
+                                  children: [
+                                    TextSpan(text: " "),
+                                    TextSpan(
+                                        text: (verses.indexWhere(
+                                                    (element) => element == e) +
+                                                1)
+                                            .toString(),
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyLarge!
+                                            .copyWith(
+                                                fontFamily: "aya",
+                                                fontSize: 30)),
+                                    TextSpan(text: " "),
+                                  ]);
                             }).toList()),
                             textDirection: TextDirection.rtl,
                           );

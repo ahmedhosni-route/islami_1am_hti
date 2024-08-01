@@ -183,5 +183,7 @@ class Assets {
   static const String suras97 = 'assets/Suras/97.txt';
   static const String suras98 = 'assets/Suras/98.txt';
   static const String suras99 = 'assets/Suras/99.txt';
+  static const String translationsAr = 'assets/translations/ar.json';
+  static const String translationsEn = 'assets/translations/en.json';
 
 }
